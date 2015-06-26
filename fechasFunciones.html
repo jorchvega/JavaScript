@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Aplicando funciones</title>
+</head>
+<body>
+		<script type="text/javascript">
+			function crearOptions(desde, hasta, seleccionado){
+				for(var i=0; i < (hasta-desde+1); i++){
+					if(seleccionado != undefined){
+						console.log(seleccionado);
+						if(seleccionado == i+desde){
+							document.write("<option selected='selected'>" + parseInt(i+desde) + "</option>");
+						}
+						else{
+							document.write("<option>" + parseInt(i+desde) + "</option>");
+						}
+					}
+					else{
+						document.write("<option>" + parseInt(i+desde) + "</option>");
+					}
+				}				
+			}
+		</script>
+
+
+		<form action="" method="post">
+		<select name="dia" id="dia">
+			<script type="text/javascript">
+				crearOptions(1,31);
+			</script>
+		</select>
+		<select name="mes" id="mes">
+			<script type="text/javascript">
+				crearOptions(1,12);
+			</script>
+		</select>
+		<select name="anio" id="anio">
+			<script type="text/javascript">
+				crearOptions(1900,2015,1980);
+			</script>
+		</select>
+	</form>
+
+</body>
+</html>

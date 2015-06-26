@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Condiciones complejas</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var descuento = 0;
+
+		var cantidadProductos = prompt("Ingrese la cantidad de productos");
+		var precioTotal = prompt("Precio Total");
+		var pagoEnEfectivo = confirm("¿Ha pagado con efectivo?");
+
+		if(cantidadProductos > 10 && precioTotal < 500){
+			descuento = 10;
+		}
+		if(cantidadProductos > 10 && precioTotal >= 500){
+			descuento = 15;
+		}
+		if(precioTotal < 10 && !pagoEnEfectivo){
+			descuento = 2;
+		}
+
+		// 500 Productos ó en 1000 en Precio -> Mayorista
+		if((cantidadProductos >= 500 || precioTotal >= 1000) && (pagoEnEfectivo)){
+			descuento = descuento + descuento*20/100;
+		}
+
+		/* Operadores lógicos 
+		   AND &&
+		   OR  ||
+		   NOT !
+		   XOR xor
+		*/
+	</script>
+</body>
+</html>

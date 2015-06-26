@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cancelando acciones por defecto</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function preguntar(){
+			var respuesta = confirm("¿Está seguro que desea ir a la web?");
+			return respuesta;
+		}
+	</script>
+	<!-- El return preguntar(), retorna un valor true o false al evento onclick es completamente utilizable con otros eventos como onload -->
+	<a href="http://wwww.google.com.mx/" onclick="return preguntar()">Ir a la web</a>
+</body>
+</html>

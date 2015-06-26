@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de fechas con arrays</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Objeto Date
+		var fecha = new Date();
+		var dia = fecha.getDate();
+		var mes = fecha.getMonth();
+		var anio = fecha.getFullYear();
+		var diaSemana = fecha.getDay();
+
+		// Vectores
+		var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+		var diasSemana = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+
+		// Concatenación de la fecha
+		document.write(diasSemana[diaSemana-1] + " " + dia + " de " + meses[mes] + " de " + anio);
+	</script>
+</body>
+</html>

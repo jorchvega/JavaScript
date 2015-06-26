@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos de formulario</title>
+</head>
+<body>
+	<form action="" onsubmit="alert('Has enviado el formulario')">
+		<p>
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" onfocus="alert('Has entrado en foco')" onblur="alert('Has salido del foco')" onchange="alert('Has cambiado el valor')">
+		</p>
+		<p>
+			<input type="submit" value="Enviar">
+		</p>
+	</form>
+</body>
+</html>

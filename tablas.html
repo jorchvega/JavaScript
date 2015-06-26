@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tablas</title>
+	<script type="text/javascript">
+		// Define el numero de sucursales
+		var noSucursales = prompt("Numero de sucursales");
+	</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<script type="text/javascript">
+				for(var i = 0; i < 12; i++){
+					if(i==0){
+						document.write("<th>Sucursal</th>");
+					}
+					document.write("<th>Mes " + parseInt(i+1) + "</th>");
+				}
+			</script>
+		</tr>	
+
+		<script type="text/javascript">
+			for(var i = 0; i < noSucursales; i++){
+				document.write("<tr>");
+					for(var j = 0;j < 12; j++){
+						if(j==0){
+							document.write("<td>Suc. " + parseInt(i + 1) + "</td>");
+						}
+						document.write("<td>");
+						document.write("<input type='text' size='8'>");
+						document.write("</td>");
+					}
+				document.write("</tr>");
+			}
+		</script>
+	</table>
+</body>
+</html>

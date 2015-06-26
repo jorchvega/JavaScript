@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// Variable global
+		var tipoLetra = "Arial";
+
+		function mostrarMensaje(mensaje, color){
+			// Variable local
+			var tamanioLetra = 14;
+
+			if(color=="rojo"){
+				document.write("<p style='color: red'>" + mensaje + "</p>");
+			}
+			else{
+				document.write("<p style='color: blue'>" + mensaje + "</p>");
+			}
+		}
+
+		function calcularDescuento(precio, descuento){
+			var final = precio - (precio * descuento / 100);
+			return final;
+		}
+
+		var precioPagado = calcularDescuento(600, 10);
+
+		document.write(precioPagado);
+
+		// Invocar funcion
+		mostrarMensaje("Este es mi mensaje y mas...", "rojo");
+		mostrarMensaje("Este es otro mensaje", "color");
+
+		document.write(tamanioLetra);
+	</script>
+</body>
+</html>

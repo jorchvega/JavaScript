@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Variables logicas</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Variable buleana, o lógica
+		var edad = prompt("Dime tu edad");
+
+		var esMayorEdad = (edad >= 18);
+
+		if(esMayorEdad){
+			if(edad==18){
+				document.write("Gracias por ingresar, casi que no entras");
+			}
+			else{
+				document.write("Gracias por ingresar al sitio para mayores de edad");
+			}
+		}
+		else{
+			document.write("Usted no puede ingresar");
+		}
+
+		/*
+			Operadores lógicos
+			< Menor
+			> Mayor
+			<= Menor o Igual
+			>= Mayor o Igual
+			== Igual
+			!= Diferente
+		*/
+	</script>
+</body>
+</html>

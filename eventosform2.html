@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos de formulario</title>
+	<script type="text/javascript">
+		function mostrarTecla(event){
+			alert(event.keyCode);
+			if(event.ctrlKey){
+				alert("Has precionado la tecla control");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="" onsubmit="alert('Has enviado el formulario')">
+		<p>
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" onkeyup="mostrarTecla(event)">
+		</p>
+		<p>
+			<input type="submit" value="Enviar">
+		</p>
+	</form>
+</body>
+</html>

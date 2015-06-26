@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Vectores precios</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var precios = new Array();
+		do{
+			var precio = prompt("Ingrese el precio");
+			if(precio!="" && precio!=undefined){
+				precios.push(precio);
+			}
+		}while(precio!="" && precio!=undefined);
+
+		var cantidad = precios.length;
+
+		document.write("<h1>Hay " + cantidad + " precios cargados</h1>");
+
+		// Suma del vector
+		var suma = 0;
+
+		for(var i = 0; i<cantidad; i++){
+			suma = suma + parseInt(precios[i]);
+		}
+		if(cantidad > 0){
+			var promedio = suma/cantidad;
+		}
+		else{
+			var promedio = 0;
+		}
+	</script>
+	<p>Suma total: <b><script type="text/javascript">document.write(suma); </script></b></p>
+	<p>Promedio: <b><script type="text/javascript">document.write(promedio); </script></b></p>
+</body>
+</html>
