@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Mostrar y ocultar elementos</title>
+	<style type="text/css">
+		#contenedor{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<input type="checkbox" id="checkboxEncender" checked="checked" onchange="apagarEncender()">
+	<label for="checkboxEncender">Contenedor visible</label>
+	<div id="contenedor">
+		
+	</div>
+	<input type="button" value="Apagar" onclick="apagarEncender()" id="boton">
+	<input type="button" value="Apagar" onclick="apagar()">
+	<input type="button" value="Encender" onclick="encender()">
+
+	<script type="text/javascript">
+		function apagar(){
+			var contenedor = document.getElementById("contenedor");
+			// contenedor.style.visibility = "hidden";
+			contenedor.style.display = "none";
+		}
+		function encender(){
+			var contenedor = document.getElementById("contenedor");
+			// contenedor.style.visibility = "visible";
+			contenedor.style.display = "block";
+		}
+		function apagarEncender(){
+			var contenedor = document.getElementById("contenedor");
+			var boton = document.getElementById("boton");
+			var check = document.getElementById("checkboxEncender");
+			if(contenedor.style.display == "block" || contenedor.style.display == ""){
+				apagar();
+				boton.value = "Encender";
+				check.checked="";
+			}
+			else{
+				encender();
+				boton.value = "Apagar";
+				check.checked="checked";
+			}
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+	<script type="text/javascript">
+		function inicializar(){
+			var link = document.getElementById("linkv2b");
+			var caja = document.getElementById("cajaContenido");
+
+			link.href = "http://video2brain.com";
+
+			caja.style.backgroundColor = "yellow";
+			caja.style.height = "100px";
+			caja.style.border = "1px solid black";
+		}
+		function cambiarLink(){
+			document.getElementById("linkv2b").href = "http://www.google.com.mx/";
+		}
+	</script>
+</head>
+<body onload="inicializar()">
+	<div id="cajaContenido" onmouseover="this.style.backgroundColor='white'" onmouseout="this.style.backgroundColor='yellow'">
+		<a id="linkv2b">Link a la web</a>
+
+		<input type="button" onclick="cambiarLink()" value="Cambiar Link" >
+	</div>
+</body>
+</html>
